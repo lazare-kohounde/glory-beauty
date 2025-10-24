@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ENC (École Nationale de Cuisine)</title>
+    <title>Glory Beauty Center (Institut de beauté)</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="formation culinaire et hôtelière au Bénin, cuisine brassière, libanaise, italienne, indienne, chinoise, fast-food, Anglais gastronomique" name="keywords">
     <meta content="École Nationale de Cuisine" name="description">
