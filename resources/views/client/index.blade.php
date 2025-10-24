@@ -52,53 +52,16 @@
 
     <!-- Navbar start -->
     @include('client.partial.header')
-    <div class="container-fluid border-bottom bg-light wow fadeIn " data-wow-delay="0.1s" id="home">
-        <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 0px 0px 20px 20px">
-            <div class="d-flex justify-content-between">
-                <div class="top-info ps-2">
-                    <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Bénin, Cotonou Agontikon en face de l'université PIGIE.</a></small>
-                    <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">infoplus@enc.com</a></small>
-                </div>
-                <div class="top-link pe-2">
-                    <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-secondary"></i></a>
-                    <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-twitter text-secondary"></i></a>
-                    <a href="" class="btn btn-light btn-sm-square rounded-circle"><i class="fab fa-instagram text-secondary"></i></a>
-                    <a href="" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-secondary"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Navbar End -->
-
-
-    <!-- Modal Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Réchercher...</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center">
-                    <div class="input-group w-75 mx-auto d-flex">
-                        <input type="search" class="form-control p-3" placeholder="Mots clés" aria-describedby="search-icon-1">
-                        <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Search End -->
-
 
     <!-- Hero Start -->
     <div class="container-fluid py-5 hero-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row g-5">
+            <div class="row g-5 mt-2">
                 <div class="col-lg-10 col-md-12">
-                    <h1 class="mb-3 mt-5" style="color:#ffffff">Vous aimez la pâtisserie et la Cuisine?</h1>
+                    <h1 class="mb-3 mt-5" style="color: #ffffff; font-weight: semi-bold;">Vous aimez la pâtisserie et la cuisine ?</h1>
                     <h1 class="mb-5 display-1 text-white"> Notre école est un centre de référence !</h1>
-                    <a href="#contact" class="btn btn-primary  py-3 px-md-5  me-4 btn-border-radius">Inscription</a>
+                    <a href="#contact" class="btn btn-primary py-3 px-md-5 me-4 btn-border-radius">Inscription</a>
                     <a href="#programs" class="btn btn-outline-primary py-3 px-md-5 btn-border-radius">En savoir plus</a>
                 </div>
             </div>
@@ -414,7 +377,7 @@
                     <div class="program-item rounded">
                         <div class="program-img position-relative">
                             <div class="overflow-hidden img-border-radius">
-                                <img src="img/form4.jpg" class="img-fluid w-100" alt="Image">
+                                <img src="img/form3.jpg" class="img-fluid w-100" alt="Image">
                             </div>
                             <div class="px-8 py-2 bg-primary text-white program-rate">50.000 fcfa</div>
                         </div>
