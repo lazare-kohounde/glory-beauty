@@ -37,14 +37,7 @@
             z-index: 1050;
             /* Ajuste selon tes besoins */
         }
-
-        body {
-            /* Ajuste selon la hauteur de ton header */
-        }
     </style>
-
-
-
 
 </head>
 
@@ -59,7 +52,7 @@
 
     <!-- Navbar start -->
     @include('client.partial.header')
-    <div class="container-fluid border-bottom bg-light wow fadeIn " data-wow-delay="0.1s">
+    <div class="container-fluid border-bottom bg-light wow fadeIn " data-wow-delay="0.1s" id="home">
         <div class="container topbar bg-primary d-none d-lg-block py-2" style="border-radius: 0px 0px 20px 20px">
             <div class="d-flex justify-content-between">
                 <div class="top-info ps-2">
@@ -73,41 +66,6 @@
                     <a href="" class="btn btn-light btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-secondary"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container px-0 ">
-            <nav class="navbar navbar-light navbar-expand-xl py-3 ">
-                <a href="" class="navbar-brand">
-                    <h1 class="text-primary display-6"><span class="text-secondary">E</span><span style="background-color: #ff4880; color: #ffffff">N</span><span class="text-secondary">C</span></h1>
-                </a>
-                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars text-primary"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto">
-                        <a href="{{ route('accueil') }}" class="nav-item nav-link {{ request()->routeIs('accueil') ? 'active' : '' }}">Accueil</a>
-                        <a href="{{ route('a-propos') }}" class="nav-item nav-link {{ request()->routeIs('a-propos') ? 'active' : '' }}">A propos</a>
-                        <a href="{{ route('services') }}" class="nav-item nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
-                        <a href="{{ route('formations') }}" class="nav-item nav-link {{ request()->routeIs('formations') ? 'active' : '' }}">Formations</a>
-                        <a href="{{ route('evenement') }}" class="nav-item nav-link {{ request()->routeIs('evenement') ? 'active' : '' }}">Evénements</a>
-                        <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
-                    </div>
-                    <div class="d-flex me-4">
-                        <div id="phone-tada" class="d-flex align-items-center justify-content-center">
-                            <a href="" class="position-relative wow tada" data-wow-delay=".9s">
-                                <i class="fa fa-phone-alt text-primary fa-2x me-4"></i>
-                                <div class="position-absolute" style="top: -7px; left: 20px;">
-                                    <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="d-flex flex-column pe-3 border-end border-primary">
-                            <span class="text-primary">Pour toutes questions ?</span>
-                            <a href="tel:+22964374858"><span class="text-secondary">Tel: +229 64374858</span></a>
-                        </div>
-                    </div>
-                    <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
-                </div>
-            </nav>
         </div>
     </div>
     <!-- Navbar End -->
@@ -138,16 +96,15 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-10 col-md-12">
-                    <h1 class="mb-3" style="color:#ffffff">Vous aimez la pâtisserie et la Cuisine?</h1>
+                    <h1 class="mb-3 mt-5" style="color:#ffffff">Vous aimez la pâtisserie et la Cuisine?</h1>
                     <h1 class="mb-5 display-1 text-white"> Notre école est un centre de référence !</h1>
-                    <a href="{{ route('contact') }}/#contact" class="btn btn-primary  py-3 px-md-5  me-4 btn-border-radius">Inscription</a>
-                    <a href="{{ route('formations') }}" class="btn btn-primary py-3 px-md-5 btn-border-radius">En savoir plus</a>
+                    <a href="#contact" class="btn btn-primary  py-3 px-md-5  me-4 btn-border-radius">Inscription</a>
+                    <a href="#programs" class="btn btn-outline-primary py-3 px-md-5 btn-border-radius">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Hero End -->
-
 
     <!-- About Start -->
     <div class="container-fluid py-5 about bg-light" id="about">
@@ -162,8 +119,10 @@
                 </div>
                 <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
                     <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">A propos</h4>
-                    <h1 class="text-dark mb-4 display-5">Nous vous dévoilons tous les secrets en pâtisserie et cuisine</h1>
+                    <h1 class="text-dark mb-4 display-5">École Nationale de Cuisine (ENC)</h1>
                     <p class="text-dark mb-4">Fondée en 2019, l'École Nationale de Cuisine (ENC) s'est imposée comme une référence incontournable en matière de formation culinaire et hôtelière au Bénin. Son siège social est stratégiquement situé à Cotonou, dans le quartier d'Agontinkon, facilitant l'accès à ses services de formation.
+                        <br> L'ENC s'étend à travers le pays avec des annexes situées dans les grandes villes de Cotonou, Calavi, Porto-Novo et Parakou. Cette présence régionale permet à l'institution d’offrir une formation de proximité à une large population d’apprenants et de professionnels.
+                        <br> Afin de répondre à une diversité de besoins et de profils, l'ENC propose plusieurs formats de formation.
                     </p>
                     <div class="row mb-4">
                         <div class="col-lg-6">
@@ -177,10 +136,16 @@
                             <h6><i class="fas fa-check-circle me-2 text-secondary"></i>Ambiance Conviviale et Créative</h6>
                         </div>
                     </div>
-                    <a href="{{ route('a-propos') }}" class="btn btn-primary px-5 py-3 btn-border-radius">Plus de détails</a>
+                    <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">Inscription</a>
+
                 </div>
             </div>
+            <br>
+            <h1 class="text-dark mb-4 display-5">Spécialisations</h1>
+
+            Cuisine brassière, cuisine libanaise, cuisine italienne, cuisine indienne, cuisine chinoise, pâtisserie, service bar, hôtellerie, leadership entrepreneurial, anglais gastronomique, formation longue durée, formation courte durée et ateliers pour professionnels
         </div>
+
     </div>
     <!-- Modal Video -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -204,11 +169,11 @@
 
 
     <!-- Service Start -->
-    <div class="container-fluid testimonial py-5" style="background: linear-gradient(rgba(255, 72, 128, 0.05), rgba(255, 72, 128, 0.2))">
+    <div class="container-fluid testimonial py-5" style="background: linear-gradient(rgba(255, 72, 128, 0.05), rgba(255, 72, 128, 0.2))" id="services">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-                <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Nos prestations</h4>
-                <h1 class="mb-5 display-3">Nos domaines de formation</h1>
+                <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Services</h4>
+                <h1 class="mb-5 display-3">Les services que nous offrons</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
 
@@ -308,16 +273,8 @@
     </div>
     <!-- Service End -->
 
-
-
-
-
-
-
-
-
     <!-- Team Start-->
-    <div class="container-fluid team py-5">
+    <div class="container-fluid team py-5" id="team">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Nos experts formateurs</h4>
@@ -389,8 +346,165 @@
     </div>
     <!-- Team End-->
 
+    <!-- Programs Start -->
+    <div class="container-fluid program  py-5" id="programs">
+        <div class="container py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Nos Programmes</h4>
+                <h1 class="mb-5 display-3">Catalogue des formations disponibles</h1>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="program-item rounded">
+                        <div class="program-img position-relative">
+                            <div class="overflow-hidden img-border-radius">
+                                <img src="img/form1.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="px-8 py-2 bg-primary text-white program-rate">200.000 fcfa</div>
+                        </div>
+                        <div class="program-text bg-white px-4 pb-3">
+                            <div class="program-text-inner">
+                                <a href="#" class="h4">Formations longue durée</a>
+                                <p class="mt-3 mb-0">Des parcours professionnels complets, structurés sur 1, 2 ou 3 ans, pour une maîtrise progressive des métiers de la cuisine.</p>
+                            </div>
+                        </div>
+                        <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                            <img src="img/logo.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="Image" style="width: 70px; height: 70px;">
+                            <div class="ms-3">
+                                <h6 class="mb-0 text-primary">ENC Bénin</h6>
+                                <small>Ecole Nationnale de Cuisine</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                            <small class="text-white"><i class="fas fa-wheelchair me-1"></i> Présentiel</small>
+                            <small class="text-white"><i class="fas fa-book me-1"></i> 11 Modules</small>
+                            <small class="text-white"><i class="fas fa-clock me-1"></i> 3 ans</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="program-item rounded">
+                        <div class="program-img position-relative">
+                            <div class="overflow-hidden img-border-radius">
+                                <img src="img/form2.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="px-8 py-2 bg-primary text-white program-rate">90.000 fcfa</div>
+                        </div>
+                        <div class="program-text bg-white px-4 pb-3">
+                            <div class="program-text-inner">
+                                <a href="#" class="h4">Formations courte durée</a>
+                                <p class="mt-3 mb-0"> Des sessions intensives de 1, 2 ou 3 mois, conçues pour acquérir des compétences pratiques et favoriser une insertion professionnelle rapide.</p>
+                            </div>
+                        </div>
+                        <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                            <img src="img/logo.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="Image" style="width: 70px; height: 70px;">
+                            <div class="ms-3">
+                                <h6 class="mb-0 text-primary">ENC Bénin</h6>
+                                <small>Ecole Nationnale de Cuisine</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                            <small class="text-white"><i class="fas fa-wheelchair me-1"></i> Présentiel</small>
+                            <small class="text-white"><i class="fas fa-book me-1"></i> 8 Modules</small>
+                            <small class="text-white"><i class="fas fa-clock me-1"></i> 3 mois</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="program-item rounded">
+                        <div class="program-img position-relative">
+                            <div class="overflow-hidden img-border-radius">
+                                <img src="img/form4.jpg" class="img-fluid w-100" alt="Image">
+                            </div>
+                            <div class="px-8 py-2 bg-primary text-white program-rate">50.000 fcfa</div>
+                        </div>
+                        <div class="program-text bg-white px-4 pb-3">
+                            <div class="program-text-inner">
+                                <a href="#" class="h4">Ateliers trimestriels pour professionnels</a>
+                                <p class="mt-3 mb-0">Des formations pratiques de 2 à 3 jours, idéales pour les professionnels souhaitant se perfectionner ou acquérir de nouvelles compétences.</p>
+                            </div>
+                        </div>
+                        <div class="program-teacher d-flex align-items-center border-top border-primary bg-white px-4 py-3">
+                            <img src="img/logo.jpg" class="img-fluid rounded-circle p-2 border border-primary bg-white" alt="Image" style="width: 70px; height: 70px;">
+                            <div class="ms-3">
+                                <h6 class="mb-0 text-primary">ENC Bénin</h6>
+                                <small>Ecole Nationnale de Cuisine</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between px-4 py-2 bg-primary rounded-bottom">
+                            <small class="text-white"><i class="fas fa-wheelchair me-1"></i> Présentiel</small>
+                            <small class="text-white"><i class="fas fa-book me-1"></i> 5 Modules</small>
+                            <small class="text-white"><i class="fas fa-clock me-1"></i> 3 jour</small>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="d-inline-block text-center wow fadeIn" data-wow-delay="0.1s">
+                    <a href="https://wa.me/2290164374858" class="btn btn-primary px-5 py-3 text-white btn-border-radius">Autres propositions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Program End -->
 
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container py-5">
+            <div class="p-5 bg-light rounded">
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Contactez nous</h4>
+                    <h1 class="display-3">Laissez un message</h1>
+                    <p class="mb-5">Pour les inscriptions ou toutes autres informations, remplissez le formulaire ci-dessous ou rejoignez-nous sur <a href="https://wa.me/2290164374858">WhatsApp Maintenant</a>.</p>
+                </div>
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="w-100 border border-primary p-4 rounded bg-white">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                            <div class="">
+                                <h4>Adresse</h4>
+                                <p class="mb-2">Bénin, Cotonou Agontikon en face de l'université PIGIE.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class=" w-100 border border-primary p-4 rounded bg-white">
+                            <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                            <div class="">
+                                <h4>Email</h4>
+                                <p class="mb-2">infoplus@enc.com</p><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class=" w-100 border border-primary p-4 rounded bg-white">
+                            <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
+                            <div class="">
+                                <h4>Téléphone</h4>
+                                <p class="mb-2">Tel: (+229) 0164374858</p><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                        <form action="https://formspree.io/f/manjpzdn" method="POST">
+                            <input type="text" class="w-100 form-control py-3 mb-5 border-primary" name="Nom" placeholder="Votre Nom et Prénoms">
+                            <input type="email" class="w-100 form-control py-3 mb-5 border-primary" name="Email" placeholder="Votre Email">
+                            <textarea class="w-100 form-control mb-5 border-primary" rows="8" cols="10" name="Message" placeholder="Votre Message"></textarea>
+                            <button class="w-100 btn btn-primary form-control py-3 border-primary text-white bg-primary" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="border border-primary h-100 rounded">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.2851983594569!2d2.4024478695899694!3d6.375819132411038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102355bf2c355c85%3A0x2c20fc4c24985e05!2sPIGIER%20BENIN!5e0!3m2!1sfr!2sbj!4v1750755571698!5m2!1sfr!2sbj"
+                                class="w-100 h-100 rounded" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     @include('client.partial.footer-sction')
@@ -401,9 +515,29 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#" id="backToTop" data-wow-delay="0.1s"class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
+    <script>
+        const backToTop = document.getElementById('backToTop');
 
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                backToTop.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                backToTop.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

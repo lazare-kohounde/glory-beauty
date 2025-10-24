@@ -15,7 +15,7 @@
     </div>
     <div class="container px-0 ">
         <nav class="navbar navbar-light navbar-expand-xl py-3 ">
-            <a href="{{ route('accueil') }}" class="navbar-brand">
+            <a href="#hero" class="navbar-brand">
                 <h1 class="text-primary display-6"><span class="text-secondary">E</span><span style="background-color: #ff4880; color: #ffffff">N</span><span class="text-secondary">C</span></h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -23,11 +23,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="{{ route('accueil') }}" class="nav-item nav-link {{ request()->routeIs('accueil') ? 'active' : '' }}">Accueil</a>
-                    <a href="{{ route('a-propos') }}" class="nav-item nav-link {{ request()->routeIs('a-propos') ? 'active' : '' }}">A propos</a>
-                    <a href="{{ route('services') }}" class="nav-item nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
-                    <a href="{{ route('formations') }}" class="nav-item nav-link {{ request()->routeIs('formations') ? 'active' : '' }}">Formations</a>
-                    <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+                    <a href="#home" class="nav-item nav-link">Accueil</a>
+                    <a href="#about" class="nav-item nav-link">A propos</a>
+                    <a href="#services" class="nav-item nav-link">Services</a>
+                    <a href="#programs" class="nav-item nav-link">Formations</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="d-flex me-4">
                     <div id="phone-tada" class="d-flex align-items-center justify-content-center">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="d-flex flex-column pe-3 border-end border-primary">
                         <span class="text-primary">Pour toutes questions ?</span>
-                        <a href="tel:+22964374858"><span class="text-secondary">Tel: +229 64374858</span></a>
+                        <a href="tel:+2290164374858"><span class="text-secondary">Tel: +229 0164374858</span></a>
                     </div>
                 </div>
                 <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
